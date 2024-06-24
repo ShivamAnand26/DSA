@@ -1,0 +1,73 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Sorting",
+      "request": "launch",
+      "mainClass": "Sorting",
+      "projectName": "DSA_4d177f8"
+    },
+    {
+      "type": "java",
+      "name": "Main",
+      "request": "launch",
+      "mainClass": "Main",
+      "projectName": "DSA_4d177f8"
+    },
+    {
+      "type": "java",
+      "name": "OOPs_in_one_program",
+      "request": "launch",
+      "mainClass": "OOPs_in_one_program",
+      "projectName": "DSA_4d177f8"
+    },
+    {
+      "type": "java",
+      "name": "OOPs",
+      "request": "launch",
+      "mainClass": "OOPs",
+      "projectName": "DSA_4d177f8"
+    },
+    {
+      "type": "java",
+      "name": "java",
+      "request": "launch",
+      "mainClass": "java",
+      "projectName": "DSA_4d177f8"
+    },
+    {
+      "type": "java",
+      "name": "palindroome",
+      "request": "launch",
+      "mainClass": "palindroome",
+      "projectName": "DSA_4d177f8"
+    },
+    {
+      "type": "java",
+      "name": "employees",
+      "request": "launch",
+      "mainClass": "employees",
+      "projectName": "DSA_4d177f8"
+    },
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppdbg",
+      "request": "launch",
+      "args": [],
+      "stopAtEntry": false,
+      "externalConsole": true,
+      "cwd": "c:/Users/anand/OneDrive/Desktop/DSA",
+      "program": "c:/Users/anand/OneDrive/Desktop/DSA/build/Debug/outDebug",
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    }
+  ]
+}
