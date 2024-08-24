@@ -1,0 +1,73 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+struct Node
+{
+    int val;
+    Node *left;
+    Node *right;
+
+    Node() : val(), left(), right() {}
+    Node(int x) : val(x), left(), right() {}
+    Node(int x, Node *left, Node *right) : val(x), left(left), right(right) {}
+};
+
+int maxDepth(Node *root)
+{
+    if (root == nullptr)
+    {
+        return 0;
+    }
+
+    int lh = maxDepth(root->left);
+    int rh = maxDepth(root->right);
+
+    return 1 + max(lh, rh);
+}
+
+bool check(Node *root)
+{
+    if (root == nullptr)
+    {
+        return true;
+    }
+
+    int lh = maxDepth(root->left);
+    int rh = maxDepth(root->right);
+
+    if (abs(lh - rh) > 1)
+    {
+        return false;
+    }
+
+    bool left = check(root->left);
+    bool right = check(root->right);
+
+    if (!left || !right)
+    {
+        return false;
+    }
+
+    return true;
+}
+
+int main()
+{
+    Node *root = new Node(1);
+    root->left = new Node(2);
+    root->left->left = new Node(3);
+    root->left->right = new Node(4);
+    root->right = new Node(5);
+    root->right->left = new Node(6);
+    root->right->right = new Node(7);
+
+    bool check1 = check(root);
+    if (check1 == true)
+    {
+        cout << "It is a Balanced Binary Tree." << endl;
+    }
+    else
+    {
+        cout << "It is not a Balanced Binary Tree." << endl;
+    }
+}
