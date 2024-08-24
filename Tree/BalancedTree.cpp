@@ -12,7 +12,8 @@ struct Node
     Node(int x, Node *left, Node *right) : val(x), left(left), right(right) {}
 };
 
-int maxDepth(Node *root)
+// Method 1: Time Complexity O(N*N)
+/*int maxDepth(Node *root)
 {
     if (root == nullptr)
     {
@@ -49,6 +50,34 @@ bool check(Node *root)
     }
 
     return true;
+}*/
+
+// Method 2: Time Complexity O(N)
+int dfsHeight(Node *root)
+{
+    if (root == nullptr)
+    {
+        return 0;
+    }
+
+    int lh = dfsHeight(root->left);
+    int rh = dfsHeight(root->right);
+
+    if (lh == -1 || rh == -1)
+    {
+        return -1;
+    }
+
+    if (abs(lh - rh) > 1)
+    {
+        return -1;
+    }
+    return max(lh, rh) + 1;
+}
+
+bool isBalanced(Node *root)
+{
+    return dfsHeight(root) != -1;
 }
 
 int main()
@@ -61,7 +90,7 @@ int main()
     root->right->left = new Node(6);
     root->right->right = new Node(7);
 
-    bool check1 = check(root);
+    bool check1 = isBalanced(root);
     if (check1 == true)
     {
         cout << "It is a Balanced Binary Tree." << endl;
