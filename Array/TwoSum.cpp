@@ -58,6 +58,7 @@ int main()
     vector<int> v{4, 1, 2, 3, 1};
     // vector<int> v{3, 2, 4, 7};
     string result = read(5, v, 5);
-    vector<int> result;
+    // vector<int> result;
+    cout << result;
     // twoSum(v, 6);
 }
