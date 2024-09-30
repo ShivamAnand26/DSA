@@ -8,7 +8,7 @@ int countshoespair(vector<string> shoes)
 
     for (const auto &shoe : shoes)
     {
-        int size = shoe[0] - '0';
+        int size = shoe[0];
         int type = shoe[1];
 
         if (type == 'l')
